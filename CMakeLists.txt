@@ -12,6 +12,9 @@ find_package(PcapPlusPlus REQUIRED)
 include_directories(include)
 
 # executable and soucre files
-add_executable(nosy src/main.cpp)
+add_executable(nosy
+  src/main.cpp
+  src/parser.cpp
+)
 target_compile_options(nosy PRIVATE -Wall -Wextra)
 target_link_libraries(nosy PRIVATE PcapPlusPlus::Pcap++)
